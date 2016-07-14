@@ -1,0 +1,25 @@
+# Binomial Probability Graph Where n=9 and p=.560
+
+# Calculate the probabilities for each possible outcome / number of successes
+
+zero <- dbinom(0,9,.560)
+nine <- dbinom(9,9,.560)
+one <- dbinom(1,9,.560)
+two <- dbinom(2,9,.560)
+three <- dbinom(3,9,.560)
+four <- dbinom(4,9,.560)
+five <- dbinom(5,9,.560)
+six <- dbinom(6,9,.560)
+seven <- dbinom(7,9,.560)
+eight <- dbinom(8,9,.560)
+nine <-dbinom(9,9,.560)
+
+# Create a table where 'x' is each possible outcome and 'px' is the corresponding probability
+
+x <- c(0,1,2,3,4,5,6,7,8,9)
+px <- c(zero,one,two,three,four,five,six,seven,eight,nine)
+binomdist <- cbind(x,px)
+
+# Plot the table
+
+plot(binomdist, type="h")
